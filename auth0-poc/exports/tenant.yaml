@@ -1,0 +1,1210 @@
+rules: []
+rulesConfigs: []
+pages: []
+resourceServers:
+  - name: SSO Dashboard API
+    identifier: urn:auth0-sso-dashboard
+    id: 67c7620f8119053af8e29150
+    allow_offline_access: false
+    scopes:
+      - value: read:applications
+        description: Get applications
+      - value: manage:applications
+        description: Manage applications
+    signing_alg: RS256
+    skip_consent_for_verifiable_first_party_clients: false
+    token_lifetime: 86400
+    token_lifetime_for_web: 7200
+  - name: example
+    identifier: test
+    id: 66c8d11ca589f6acafdac6b4
+    allow_offline_access: false
+    scopes:
+      - value: read:appointments
+        description: read
+      - value: example:123
+        description: example
+      - value: example:1234
+        description: example
+    signing_alg: RS256
+    skip_consent_for_verifiable_first_party_clients: true
+    token_dialect: access_token
+    token_lifetime: 86400
+    token_lifetime_for_web: 7200
+  - name: management api TEST
+    identifier: JsonImport
+    id: 66d8f58f37589dd886ede07e
+    allow_offline_access: false
+    enforce_policies: false
+    scopes:
+      - value: create:users
+        description: create Users
+    signing_alg: RS256
+    skip_consent_for_verifiable_first_party_clients: true
+    token_dialect: access_token
+    token_lifetime: 86400
+    token_lifetime_for_web: 7200
+  - name: wordpress
+    identifier: https:wordpress
+    id: 66eb520adbc50e5e26a04786
+    allow_offline_access: false
+    scopes:
+      - value: create:users
+        description: crea usuarios
+    signing_alg: RS256
+    skip_consent_for_verifiable_first_party_clients: true
+    token_dialect: access_token
+    token_lifetime: 86400
+    token_lifetime_for_web: 7200
+clients:
+  - name: API Explorer Application
+    client_id: jUDNqJVplnO2C5nnVRbmaA3GW9tHVdFl
+    app_type: non_interactive
+    cross_origin_auth: false
+    cross_origin_authentication: true
+    custom_login_page_on: true
+    grant_types:
+      - client_credentials
+    is_first_party: true
+    is_token_endpoint_ip_header_trusted: false
+    jwt_configuration:
+      alg: RS256
+      lifetime_in_seconds: 36000
+      secret_encoded: false
+    oidc_conformant: true
+    refresh_token:
+      expiration_type: non-expiring
+      leeway: 0
+      infinite_token_lifetime: true
+      infinite_idle_token_lifetime: true
+      token_lifetime: 31557600
+      idle_token_lifetime: 2592000
+      rotation_type: non-rotating
+    sso_disabled: false
+    token_endpoint_auth_method: client_secret_post
+  - name: CLI POC
+    client_id: JpNnYe9U9PccgQhLKC3uj0tCVIYkdIWI
+    app_type: non_interactive
+    cross_origin_auth: false
+    cross_origin_authentication: false
+    custom_login_page_on: true
+    grant_types:
+      - client_credentials
+    is_first_party: true
+    is_token_endpoint_ip_header_trusted: false
+    jwt_configuration:
+      alg: RS256
+      lifetime_in_seconds: 36000
+      secret_encoded: false
+    oidc_conformant: true
+    refresh_token:
+      expiration_type: non-expiring
+      leeway: 0
+      infinite_token_lifetime: true
+      infinite_idle_token_lifetime: true
+      token_lifetime: 31557600
+      idle_token_lifetime: 2592000
+      rotation_type: non-rotating
+    sso_disabled: false
+    token_endpoint_auth_method: client_secret_post
+  - name: Default App
+    client_id: bnQlYn5MeEH1nfIUU3F7ThaRjp7MthhV
+    allowed_clients: []
+    allowed_logout_urls:
+      - http://localhost:3000
+    callbacks:
+      - http://localhost:3000
+    client_aliases: []
+    cross_origin_auth: false
+    cross_origin_authentication: true
+    custom_login_page_on: true
+    grant_types:
+      - authorization_code
+      - implicit
+      - refresh_token
+    is_first_party: true
+    is_token_endpoint_ip_header_trusted: false
+    jwt_configuration:
+      alg: RS256
+      lifetime_in_seconds: 36000
+      secret_encoded: false
+    native_social_login:
+      apple:
+        enabled: false
+      facebook:
+        enabled: false
+    oidc_conformant: true
+    refresh_token:
+      expiration_type: non-expiring
+      leeway: 0
+      infinite_token_lifetime: true
+      infinite_idle_token_lifetime: true
+      token_lifetime: 2592000
+      idle_token_lifetime: 1296000
+      rotation_type: non-rotating
+    sso_disabled: false
+    token_endpoint_auth_method: client_secret_post
+    web_origins:
+      - http://localhost:3000
+  - name: Json Import Test (Test Application)
+    client_id: Xn6e9DSDg5qJrroPqLA1gt0BbmagPd3q
+    app_type: non_interactive
+    cross_origin_auth: false
+    cross_origin_authentication: true
+    custom_login_page_on: true
+    grant_types:
+      - client_credentials
+    is_first_party: true
+    is_token_endpoint_ip_header_trusted: false
+    jwt_configuration:
+      alg: RS256
+      lifetime_in_seconds: 36000
+      secret_encoded: false
+    oidc_conformant: true
+    refresh_token:
+      expiration_type: non-expiring
+      leeway: 0
+      infinite_token_lifetime: true
+      infinite_idle_token_lifetime: true
+      token_lifetime: 31557600
+      idle_token_lifetime: 2592000
+      rotation_type: non-rotating
+    sso_disabled: false
+    token_endpoint_auth_method: client_secret_post
+  - name: My App2
+    client_id: 6auf3kOErCMTzZIuiywc4k4gEmNz4e1M
+    allowed_clients: []
+    allowed_logout_urls:
+      - http://localhost:3000
+    app_type: spa
+    callbacks:
+      - http://localhost:3000
+    client_aliases: []
+    cross_origin_auth: false
+    cross_origin_authentication: true
+    custom_login_page_on: true
+    grant_types:
+      - authorization_code
+      - implicit
+      - refresh_token
+    is_first_party: true
+    is_token_endpoint_ip_header_trusted: false
+    jwt_configuration:
+      alg: RS256
+      lifetime_in_seconds: 36000
+      secret_encoded: false
+    native_social_login:
+      apple:
+        enabled: false
+      facebook:
+        enabled: false
+    oidc_conformant: true
+    organization_require_behavior: no_prompt
+    organization_usage: deny
+    refresh_token:
+      expiration_type: expiring
+      leeway: 0
+      token_lifetime: 2592000
+      idle_token_lifetime: 1296000
+      infinite_token_lifetime: false
+      infinite_idle_token_lifetime: false
+      rotation_type: rotating
+    sso_disabled: false
+    token_endpoint_auth_method: none
+    web_origins:
+      - http://localhost:3000
+  - name: My App5
+    client_id: I1pXdOnZDT7pt8EHS0fHDQnqHCjKpoJf
+    app_type: native
+    cross_origin_auth: false
+    cross_origin_authentication: true
+    custom_login_page_on: true
+    grant_types:
+      - authorization_code
+      - implicit
+      - refresh_token
+    is_first_party: true
+    is_token_endpoint_ip_header_trusted: false
+    jwt_configuration:
+      alg: RS256
+      lifetime_in_seconds: 36000
+      secret_encoded: false
+    oidc_conformant: true
+    refresh_token:
+      expiration_type: non-expiring
+      leeway: 0
+      infinite_token_lifetime: true
+      infinite_idle_token_lifetime: true
+      token_lifetime: 2592000
+      idle_token_lifetime: 1296000
+      rotation_type: non-rotating
+    sso_disabled: false
+    token_endpoint_auth_method: none
+  - name: MytestApp
+    client_id: IIueMa8lruBjgFDbXB57OVQuXMFtSJsN
+    app_type: regular_web
+    cross_origin_auth: false
+    cross_origin_authentication: true
+    custom_login_page_on: true
+    grant_types:
+      - authorization_code
+      - implicit
+      - refresh_token
+      - client_credentials
+    is_first_party: true
+    is_token_endpoint_ip_header_trusted: false
+    jwt_configuration:
+      alg: RS256
+      lifetime_in_seconds: 36000
+      secret_encoded: false
+    oidc_conformant: true
+    refresh_token:
+      expiration_type: non-expiring
+      leeway: 0
+      infinite_token_lifetime: true
+      infinite_idle_token_lifetime: true
+      token_lifetime: 31557600
+      idle_token_lifetime: 2592000
+      rotation_type: non-rotating
+    sso_disabled: false
+    token_endpoint_auth_method: client_secret_post
+  - name: NativeToWebSSO Test
+    client_id: 3T1tJyD2uvv4hIRzfbUD5fMLdAArg9eg
+    allowed_clients: []
+    app_type: spa
+    callbacks:
+      - http://localhost:3000
+    client_aliases: []
+    cross_origin_auth: false
+    cross_origin_authentication: false
+    custom_login_page_on: true
+    grant_types:
+      - authorization_code
+      - implicit
+      - refresh_token
+    is_first_party: true
+    is_token_endpoint_ip_header_trusted: false
+    jwt_configuration:
+      alg: RS256
+      lifetime_in_seconds: 36000
+      secret_encoded: false
+    native_social_login:
+      apple:
+        enabled: false
+      facebook:
+        enabled: false
+    oidc_conformant: true
+    refresh_token:
+      expiration_type: expiring
+      leeway: 0
+      token_lifetime: 2592000
+      idle_token_lifetime: 1296000
+      infinite_token_lifetime: false
+      infinite_idle_token_lifetime: false
+      rotation_type: rotating
+    sso_disabled: false
+    token_endpoint_auth_method: none
+  - name: auth0-sso-dashboard
+    client_id: vJGGNOIKPamGNj9GsOEjGZNuu1nk3pat
+    cross_origin_auth: false
+    cross_origin_authentication: false
+    custom_login_page_on: true
+    grant_types:
+      - authorization_code
+      - implicit
+      - refresh_token
+      - client_credentials
+    is_first_party: true
+    is_token_endpoint_ip_header_trusted: false
+    jwt_configuration:
+      alg: RS256
+      lifetime_in_seconds: 36000
+      secret_encoded: false
+    oidc_conformant: true
+    refresh_token:
+      expiration_type: non-expiring
+      leeway: 0
+      infinite_token_lifetime: true
+      infinite_idle_token_lifetime: true
+      token_lifetime: 31557600
+      idle_token_lifetime: 2592000
+      rotation_type: non-rotating
+    sso_disabled: false
+    token_endpoint_auth_method: client_secret_post
+  - name: example (Test Application)
+    client_id: OjCH0gjvSUhazZQKD6go47xsVBv4bR4y
+    app_type: non_interactive
+    cross_origin_auth: false
+    cross_origin_authentication: true
+    custom_login_page_on: true
+    grant_types:
+      - client_credentials
+    is_first_party: true
+    is_token_endpoint_ip_header_trusted: false
+    jwt_configuration:
+      alg: RS256
+      lifetime_in_seconds: 36000
+      secret_encoded: false
+    oidc_conformant: true
+    refresh_token:
+      expiration_type: non-expiring
+      leeway: 0
+      infinite_token_lifetime: true
+      infinite_idle_token_lifetime: true
+      token_lifetime: 31557600
+      idle_token_lifetime: 2592000
+      rotation_type: non-rotating
+    sso_disabled: false
+    token_endpoint_auth_method: client_secret_post
+  - name: wordpress (Test Application)
+    client_id: Cs0cCqdrYy4IaSUOK4qufUXQJr6iPyOr
+    app_type: non_interactive
+    cross_origin_auth: false
+    cross_origin_authentication: true
+    custom_login_page_on: true
+    grant_types:
+      - client_credentials
+    is_first_party: true
+    is_token_endpoint_ip_header_trusted: false
+    jwt_configuration:
+      alg: RS256
+      lifetime_in_seconds: 36000
+      secret_encoded: false
+    oidc_conformant: true
+    refresh_token:
+      expiration_type: non-expiring
+      leeway: 0
+      infinite_token_lifetime: true
+      infinite_idle_token_lifetime: true
+      token_lifetime: 31557600
+      idle_token_lifetime: 2592000
+      rotation_type: non-rotating
+    sso_disabled: false
+    token_endpoint_auth_method: client_secret_post
+databases:
+  - name: AdditionalDB
+    strategy: auth0
+    id: con_xtjo32ootdzqxK4b
+    enabled_clients:
+      - API Explorer Application
+      - auth0-sso-dashboard
+      - CLI POC
+      - Default App
+      - example (Test Application)
+      - Json Import Test (Test Application)
+      - My App2
+      - My App5
+      - MytestApp
+      - NativeToWebSSO Test
+      - wordpress (Test Application)
+    is_domain_connection: false
+    options:
+      mfa:
+        active: true
+        return_enroll_settings: true
+      attributes:
+        email:
+          signup:
+            status: optional
+            verification:
+              active: true
+          identifier:
+            active: true
+          profile_required: false
+          verification_method: link
+        username:
+          signup:
+            status: required
+          identifier:
+            active: true
+          validation:
+            max_length: 15
+            min_length: 1
+            allowed_types:
+              email: false
+              phone_number: false
+          profile_required: true
+      import_mode: false
+      customScripts:
+        change_password: ./databases/AdditionalDB/change_password.js
+        create: ./databases/AdditionalDB/create.js
+        delete: ./databases/AdditionalDB/delete.js
+        get_user: ./databases/AdditionalDB/get_user.js
+        login: ./databases/AdditionalDB/login.js
+        verify: ./databases/AdditionalDB/verify.js
+      disable_signup: false
+      passwordPolicy: good
+      passkey_options:
+        challenge_ui: both
+        local_enrollment_enabled: true
+        progressive_enrollment_enabled: true
+      password_history:
+        size: 5
+        enable: false
+      strategy_version: 2
+      password_dictionary:
+        enable: false
+        dictionary: []
+      authentication_methods:
+        passkey:
+          enabled: false
+        password:
+          enabled: true
+      brute_force_protection: true
+      password_no_personal_info:
+        enable: false
+      password_complexity_options:
+        min_length: 8
+      enabledDatabaseCustomization: false
+    realms:
+      - AdditionalDB
+  - name: NewTest
+    strategy: auth0
+    id: con_3M2IRkYgmNj3ceCy
+    enabled_clients:
+      - API Explorer Application
+      - auth0-sso-dashboard
+      - CLI POC
+      - Default App
+      - example (Test Application)
+      - Json Import Test (Test Application)
+      - My App2
+      - My App5
+      - MytestApp
+      - NativeToWebSSO Test
+      - wordpress (Test Application)
+    is_domain_connection: false
+    options:
+      mfa:
+        active: true
+        return_enroll_settings: true
+      attributes:
+        email:
+          signup:
+            status: optional
+            verification:
+              active: true
+          identifier:
+            active: true
+          profile_required: false
+          verification_method: link
+        username:
+          signup:
+            status: required
+          identifier:
+            active: true
+          validation:
+            max_length: 15
+            min_length: 1
+            allowed_types:
+              email: false
+              phone_number: false
+          profile_required: true
+      import_mode: false
+      customScripts:
+        change_password: ./databases/NewTest/change_password.js
+        create: ./databases/NewTest/create.js
+        delete: ./databases/NewTest/delete.js
+        get_user: ./databases/NewTest/get_user.js
+        login: ./databases/NewTest/login.js
+        verify: ./databases/NewTest/verify.js
+      disable_signup: false
+      passwordPolicy: good
+      passkey_options:
+        challenge_ui: both
+        local_enrollment_enabled: true
+        progressive_enrollment_enabled: true
+      password_history:
+        size: 5
+        enable: false
+      strategy_version: 2
+      password_dictionary:
+        enable: false
+        dictionary: []
+      authentication_methods:
+        passkey:
+          enabled: false
+        password:
+          enabled: true
+      brute_force_protection: true
+      password_no_personal_info:
+        enable: false
+      password_complexity_options:
+        min_length: 8
+      enabledDatabaseCustomization: false
+    realms:
+      - NewTest
+connections:
+  - name: OktaTest
+    strategy: okta
+    id: con_uM7FvCzOrahw2PIN
+    display_name: OktaTest
+    enabled_clients:
+      - auth0-sso-dashboard
+      - CLI POC
+      - My App2
+      - MytestApp
+      - NativeToWebSSO Test
+      - wordpress (Test Application)
+    is_domain_connection: false
+    options:
+      type: back_channel
+      scope: openid profile email
+      issuer: https://trial-9074569.okta.com
+      jwks_uri: https://trial-9074569.okta.com/oauth2/v1/keys
+      client_id: 0oaik37gahEhSfiIs697
+      attribute_map:
+        attributes:
+          name: ${context.tokenset.name}
+          email: ${context.tokenset.email}
+          title: ${context.userinfo.title}
+          username: ${context.tokenset.preferred_username}
+          federated_groups: ${context.userinfo.groups}
+          federated_locale: ${context.userinfo.locale}
+          federated_zoneinfo: ${context.userinfo.zoneinfo}
+        mapping_mode: use_map
+        userinfo_scope: openid email profile groups
+      client_secret: '##CONNECTIONS_OKTA_SECRET##'
+      oidc_metadata:
+        issuer: https://trial-9074569.okta.com
+        jwks_uri: https://trial-9074569.okta.com/oauth2/v1/keys
+        token_endpoint: https://trial-9074569.okta.com/oauth2/v1/token
+        claims_supported:
+          - iss
+          - ver
+          - sub
+          - aud
+          - iat
+          - exp
+          - jti
+          - auth_time
+          - amr
+          - idp
+          - nonce
+          - name
+          - nickname
+          - preferred_username
+          - given_name
+          - middle_name
+          - family_name
+          - email
+          - email_verified
+          - profile
+          - zoneinfo
+          - locale
+          - address
+          - phone_number
+          - picture
+          - website
+          - gender
+          - birthdate
+          - updated_at
+          - at_hash
+          - c_hash
+        scopes_supported:
+          - openid
+          - email
+          - profile
+          - address
+          - phone
+          - offline_access
+          - groups
+        userinfo_endpoint: https://trial-9074569.okta.com/oauth2/v1/userinfo
+        revocation_endpoint: https://trial-9074569.okta.com/oauth2/v1/revoke
+        end_session_endpoint: https://trial-9074569.okta.com/oauth2/v1/logout
+        grant_types_supported:
+          - authorization_code
+          - implicit
+          - refresh_token
+          - password
+          - urn:ietf:params:oauth:grant-type:device_code
+          - urn:okta:params:oauth:grant-type:otp
+          - http://auth0.com/oauth/grant-type/mfa-otp
+          - urn:okta:params:oauth:grant-type:oob
+          - http://auth0.com/oauth/grant-type/mfa-oob
+        registration_endpoint: https://trial-9074569.okta.com/oauth2/v1/clients
+        authorization_endpoint: https://trial-9074569.okta.com/oauth2/v1/authorize
+        introspection_endpoint: https://trial-9074569.okta.com/oauth2/v1/introspect
+        subject_types_supported:
+          - public
+        response_modes_supported:
+          - query
+          - fragment
+          - form_post
+          - okta_post_message
+        response_types_supported:
+          - code
+          - id_token
+          - code id_token
+          - code token
+          - id_token token
+          - code id_token token
+        claims_parameter_supported: false
+        request_parameter_supported: true
+        device_authorization_endpoint: https://trial-9074569.okta.com/oauth2/v1/device/authorize
+        request_uri_parameter_supported: false
+        code_challenge_methods_supported:
+          - S256
+        require_request_uri_registration: false
+        dpop_signing_alg_values_supported:
+          - RS256
+          - RS384
+          - RS512
+          - ES256
+          - ES384
+          - ES512
+        id_token_signing_alg_values_supported:
+          - RS256
+        pushed_authorization_request_endpoint: https://trial-9074569.okta.com/oauth2/v1/par
+        token_endpoint_auth_methods_supported:
+          - client_secret_basic
+          - client_secret_post
+          - client_secret_jwt
+          - private_key_jwt
+          - none
+        revocation_endpoint_auth_methods_supported:
+          - client_secret_basic
+          - client_secret_post
+          - client_secret_jwt
+          - private_key_jwt
+          - none
+        request_object_signing_alg_values_supported:
+          - HS256
+          - HS384
+          - HS512
+          - RS256
+          - RS384
+          - RS512
+          - ES256
+          - ES384
+          - ES512
+        introspection_endpoint_auth_methods_supported:
+          - client_secret_basic
+          - client_secret_post
+          - client_secret_jwt
+          - private_key_jwt
+          - none
+      schema_version: oidc-V4
+      token_endpoint: https://trial-9074569.okta.com/oauth2/v1/token
+      userinfo_endpoint: https://trial-9074569.okta.com/oauth2/v1/userinfo
+      connection_settings:
+        pkce: auto
+      authorization_endpoint: https://trial-9074569.okta.com/oauth2/v1/authorize
+    show_as_button: true
+  - name: email
+    strategy: email
+    id: con_jw5lH7hiCrFreryT
+    enabled_clients:
+      - auth0-sso-dashboard
+      - CLI POC
+      - Default App
+      - NativeToWebSSO Test
+    is_domain_connection: false
+    options:
+      name: email
+      totp:
+        length: 6
+        time_step: 180
+      email:
+        body: ./email.html
+        from: '{{ application.name }} <root@auth0.com>'
+        syntax: liquid
+        subject: Welcome to {{ application.name }}
+      disable_signup: false
+      brute_force_protection: true
+  - name: google-oauth2
+    strategy: google-oauth2
+    id: con_xJX6Bbz0fbgY3WUb
+    enabled_clients:
+      - API Explorer Application
+      - auth0-sso-dashboard
+      - CLI POC
+      - Default App
+      - example (Test Application)
+      - Json Import Test (Test Application)
+      - My App2
+      - My App5
+      - MytestApp
+      - NativeToWebSSO Test
+      - wordpress (Test Application)
+    is_domain_connection: false
+    options:
+      email: true
+      scope:
+        - email
+        - profile
+      profile: true
+tenant:
+  enabled_locales:
+    - en
+  flags:
+    revoke_refresh_token_grant: false
+    disable_clickjack_protection_headers: false
+  oidc_logout:
+    rp_logout_end_session_endpoint_discovery: true
+  picture_url: >-
+    https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8NFjYAMobCuQhdp2U3b38WLpCaiPGJBUoxw&s
+  sandbox_version: '18'
+  universal_login:
+    colors:
+      page_background: '#000000'
+      primary: '#635dff'
+emailProvider: {}
+emailTemplates: []
+clientGrants:
+  - client_id: API Explorer Application
+    audience: JsonImport
+    id: cgr_4zAaVqqGxg2AHE1V
+    scope: []
+  - client_id: API Explorer Application
+    audience: https://cesar-training.us.auth0.com/api/v2/
+    id: cgr_2ZgS1ynNNOjPYtAx
+    scope:
+      - read:client_grants
+      - create:client_grants
+      - delete:client_grants
+      - update:client_grants
+      - read:users
+      - update:users
+      - delete:users
+      - create:users
+      - read:users_app_metadata
+      - update:users_app_metadata
+      - delete:users_app_metadata
+      - create:users_app_metadata
+      - read:user_custom_blocks
+      - create:user_custom_blocks
+      - delete:user_custom_blocks
+      - create:user_tickets
+      - read:clients
+      - update:clients
+      - delete:clients
+      - create:clients
+      - read:client_keys
+      - update:client_keys
+      - delete:client_keys
+      - create:client_keys
+      - read:connections
+      - update:connections
+      - delete:connections
+      - create:connections
+      - read:resource_servers
+      - update:resource_servers
+      - delete:resource_servers
+      - create:resource_servers
+      - read:device_credentials
+      - update:device_credentials
+      - delete:device_credentials
+      - create:device_credentials
+      - read:rules
+      - update:rules
+      - delete:rules
+      - create:rules
+      - read:rules_configs
+      - update:rules_configs
+      - delete:rules_configs
+      - read:hooks
+      - update:hooks
+      - delete:hooks
+      - create:hooks
+      - read:actions
+      - update:actions
+      - delete:actions
+      - create:actions
+      - read:email_provider
+      - update:email_provider
+      - delete:email_provider
+      - create:email_provider
+      - blacklist:tokens
+      - read:stats
+      - read:insights
+      - read:tenant_settings
+      - update:tenant_settings
+      - read:logs
+      - read:logs_users
+      - read:shields
+      - create:shields
+      - update:shields
+      - delete:shields
+      - read:anomaly_blocks
+      - delete:anomaly_blocks
+      - update:triggers
+      - read:triggers
+      - read:grants
+      - delete:grants
+      - read:guardian_factors
+      - update:guardian_factors
+      - read:guardian_enrollments
+      - delete:guardian_enrollments
+      - create:guardian_enrollment_tickets
+      - read:user_idp_tokens
+      - create:passwords_checking_job
+      - delete:passwords_checking_job
+      - read:custom_domains
+      - delete:custom_domains
+      - create:custom_domains
+      - update:custom_domains
+      - read:email_templates
+      - create:email_templates
+      - update:email_templates
+      - read:mfa_policies
+      - update:mfa_policies
+      - read:roles
+      - create:roles
+      - delete:roles
+      - update:roles
+      - read:prompts
+      - update:prompts
+      - read:branding
+      - update:branding
+      - delete:branding
+      - read:log_streams
+      - create:log_streams
+      - delete:log_streams
+      - update:log_streams
+      - create:signing_keys
+      - read:signing_keys
+      - update:signing_keys
+      - read:limits
+      - update:limits
+      - create:role_members
+      - read:role_members
+      - delete:role_members
+      - read:entitlements
+      - read:attack_protection
+      - update:attack_protection
+      - read:organizations_summary
+      - create:authentication_methods
+      - read:authentication_methods
+      - update:authentication_methods
+      - delete:authentication_methods
+      - read:organizations
+      - update:organizations
+      - create:organizations
+      - delete:organizations
+      - create:organization_members
+      - read:organization_members
+      - delete:organization_members
+      - create:organization_connections
+      - read:organization_connections
+      - update:organization_connections
+      - delete:organization_connections
+      - create:organization_member_roles
+      - read:organization_member_roles
+      - delete:organization_member_roles
+      - create:organization_invitations
+      - read:organization_invitations
+      - delete:organization_invitations
+      - read:scim_config
+      - create:scim_config
+      - update:scim_config
+      - delete:scim_config
+      - create:scim_token
+      - read:scim_token
+      - delete:scim_token
+      - delete:phone_providers
+      - create:phone_providers
+      - read:phone_providers
+      - update:phone_providers
+      - delete:phone_templates
+      - create:phone_templates
+      - read:phone_templates
+      - update:phone_templates
+      - create:encryption_keys
+      - read:encryption_keys
+      - update:encryption_keys
+      - delete:encryption_keys
+      - read:sessions
+      - delete:sessions
+      - read:refresh_tokens
+      - delete:refresh_tokens
+      - create:self_service_profiles
+      - read:self_service_profiles
+      - update:self_service_profiles
+      - delete:self_service_profiles
+      - create:sso_access_tickets
+      - read:forms
+      - update:forms
+      - delete:forms
+      - create:forms
+      - read:flows
+      - update:flows
+      - delete:flows
+      - create:flows
+      - read:flows_vault
+      - update:flows_vault
+      - delete:flows_vault
+      - create:flows_vault
+      - read:flows_executions
+      - delete:flows_executions
+      - read:client_credentials
+      - create:client_credentials
+      - update:client_credentials
+      - delete:client_credentials
+  - client_id: auth0-sso-dashboard
+    audience: https://cesar-training.us.auth0.com/api/v2/
+    id: cgr_cjLG6TwEJ40pJgO9
+    scope:
+      - read:clients
+      - delete:clients
+      - read:connections
+      - read:resource_servers
+      - create:resource_servers
+      - read:client_grants
+      - create:client_grants
+      - delete:client_grants
+  - client_id: example (Test Application)
+    audience: https://cesar-training.us.auth0.com/api/v2/
+    id: cgr_XSImKkCouZU8QRZn
+    scope: []
+  - client_id: wordpress (Test Application)
+    audience: https:wordpress
+    id: cgr_kq7AVWiybQCFFG0k
+    scope: []
+guardianFactors:
+  - name: duo
+    enabled: false
+  - name: email
+    enabled: false
+  - name: otp
+    enabled: false
+  - name: push-notification
+    enabled: false
+  - name: recovery-code
+    enabled: false
+  - name: sms
+    enabled: false
+  - name: webauthn-platform
+    enabled: false
+  - name: webauthn-roaming
+    enabled: false
+guardianFactorProviders: []
+guardianFactorTemplates: []
+guardianPolicies:
+  policies: []
+guardianPhoneFactorSelectedProvider:
+  provider: auth0
+guardianPhoneFactorMessageTypes:
+  message_types: []
+roles:
+  - name: Example role
+    id: rol_eINMnoymaPX9Qc4e
+    description: used as an example of role assigment with Actions
+    permissions:
+      - permission_name: read:appointments
+        resource_server_identifier: test
+  - name: test
+    id: rol_qbuEuNIb0uH49Wrf
+    description: test
+    permissions: []
+branding:
+  colors:
+    page_background: '#000000'
+    primary: '#635dff'
+  logo_url: >-
+    https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8NFjYAMobCuQhdp2U3b38WLpCaiPGJBUoxw&s
+  templates: []
+phoneProviders: []
+prompts:
+  customText:
+    en:
+      login:
+        login:
+          title: Welcome to | ${clientName}
+          pageTitle: Welcome to | ${clientName}
+          description: ' '
+      organizations:
+        organization-selection:
+          description: example
+  identifier_first: true
+  partials: {}
+  universal_login_experience: new
+  webauthn_platform_first_factor: false
+actions:
+  - name: Add Metadata to token
+    code: ./actions/Add Metadata to token/code.js
+    dependencies: []
+    deployed: false
+    runtime: node18-actions
+    secrets: []
+    status: built
+    supported_triggers:
+      - id: post-login
+        version: v3
+  - name: Custom Email Provider
+    code: ./actions/Custom Email Provider/code.js
+    dependencies: []
+    deployed: false
+    runtime: node18
+    secrets: []
+    status: built
+    supported_triggers:
+      - id: custom-email-provider
+        version: v1
+  - name: CustomClaim
+    code: ./actions/CustomClaim/code.js
+    dependencies: []
+    deployed: true
+    runtime: node18-actions
+    secrets: []
+    status: built
+    supported_triggers:
+      - id: credentials-exchange
+        version: v2
+  - name: OktaTest
+    code: ./actions/OktaTest/code.js
+    dependencies: []
+    deployed: true
+    runtime: node18-actions
+    secrets: []
+    status: built
+    supported_triggers:
+      - id: post-login
+        version: v3
+  - name: OktaTestPost User reg
+    code: ./actions/OktaTestPost User reg/code.js
+    dependencies: []
+    deployed: false
+    runtime: node18-actions
+    secrets: []
+    status: built
+    supported_triggers:
+      - id: post-user-registration
+        version: v2
+  - name: Session Management API
+    code: ./actions/Session Management API/code.js
+    dependencies:
+      - name: auth0
+        version: 4.16.0
+    deployed: false
+    runtime: node22
+    secrets:
+      - name: domain
+      - name: clientId
+      - name: clientSecret
+    status: built
+    supported_triggers:
+      - id: post-login
+        version: v3
+  - name: Token example
+    code: ./actions/Token example/code.js
+    dependencies: []
+    deployed: true
+    runtime: node18-actions
+    secrets: []
+    status: built
+    supported_triggers:
+      - id: post-login
+        version: v3
+  - name: Update Roles on login
+    code: ./actions/Update Roles on login/code.js
+    dependencies:
+      - name: auth0
+        version: 4.10.0
+    deployed: false
+    runtime: node18-actions
+    secrets:
+      - name: domain
+      - name: clientId
+      - name: clientSecret
+    status: built
+    supported_triggers:
+      - id: post-login
+        version: v3
+  - name: example
+    code: ./actions/example/code.js
+    dependencies:
+      - name: axios
+        version: 1.7.5
+    deployed: true
+    runtime: node18-actions
+    secrets:
+      - name: domain
+      - name: clientID
+      - name: clientSecret
+    status: built
+    supported_triggers:
+      - id: post-login
+        version: v3
+  - name: keepTokenExample
+    code: ./actions/keepTokenExample/code.js
+    dependencies:
+      - name: jwt-decode
+        version: 4.0.0
+      - name: auth0
+        version: 3.7.2
+    deployed: false
+    runtime: node18-actions
+    secrets:
+      - name: domain
+      - name: clientID
+      - name: clientSecret
+    status: built
+    supported_triggers:
+      - id: post-login
+        version: v3
+  - name: organizationExample
+    code: ./actions/organizationExample/code.js
+    dependencies: []
+    deployed: true
+    runtime: node18-actions
+    secrets: []
+    status: built
+    supported_triggers:
+      - id: post-login
+        version: v3
+triggers:
+  credentials-exchange:
+    - action_name: CustomClaim
+      display_name: CustomClaim
+  post-login:
+    - action_name: Session Management API
+      display_name: Session Management API
+organizations:
+  - name: example
+    id: org_AxXDIHTDuWZ7RpyZ
+    client_grants: []
+    connections: []
+    display_name: TEST ORG
+    metadata:
+      clientSecret: dsdasdasd
+      TestValue: TEST
+attackProtection:
+  breachedPasswordDetection:
+    enabled: false
+    shields: []
+    admin_notification_frequency: []
+    method: standard
+    stage:
+      pre-user-registration:
+        shields: []
+      pre-change-password:
+        shields: []
+  bruteForceProtection:
+    enabled: true
+    shields:
+      - block
+      - user_notification
+    mode: count_per_identifier_and_ip
+    allowlist: []
+    max_attempts: 10
+  suspiciousIpThrottling:
+    enabled: true
+    shields:
+      - admin_notification
+      - block
+    allowlist: []
+    stage:
+      pre-login:
+        max_attempts: 100
+        rate: 864000
+      pre-user-registration:
+        max_attempts: 50
+        rate: 1200
+logStreams: []
+customDomains: []
+themes: []
+forms: []
+flows: []
+flowVaultConnections: []
+selfServiceProfiles: []
