@@ -29,5 +29,5 @@ jobs:
         run: |
          a0deploy import \
          --input_file exports \
-         --format json \
+         --format directory \
          --debug
