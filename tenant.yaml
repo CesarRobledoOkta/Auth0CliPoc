@@ -1031,7 +1031,6 @@ actions:
     supported_triggers:
       - id: post-login
         version: v3
-
    - name: Test Action
     code: ./actions/Test Action/code.js
     dependencies: []
@@ -1042,7 +1041,6 @@ actions:
     supported_triggers:
       - id: post-login
         version: v3
-      
   - name: Custom Email Provider
     code: ./actions/Custom Email Provider/code.js
     dependencies: []
