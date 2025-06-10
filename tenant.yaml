@@ -1031,6 +1031,18 @@ actions:
     supported_triggers:
       - id: post-login
         version: v3
+    - name: hello-world-action
+    code: |
+      exports.onExecutePostLogin = async (event, api) => {
+        console.log("Hello world from Auth0 Action!");
+      };
+    supported_triggers:
+      - id: post-login
+        version: v3
+    runtime: node18
+    status: BUILT
+    secrets: []
+    dependencies: []      
   - name: Custom Email Provider
     code: ./actions/Custom Email Provider/code.js
     dependencies: []
