@@ -30,5 +30,4 @@ jobs:
          a0deploy import \
          --input_file tenant.yaml \
          --config_file config/dev.json \ 
-         --format directory \
          --debug
