@@ -28,6 +28,7 @@ jobs:
           AUTH0_CLIENT_SECRET: kOek09s_WfDpxMG3eNbZKPVNqovqJSNAxXUJzdQMXkn-AYqMqZ32WS3hSDDS2vH7
         run: |
          a0deploy import \
-         --input_file exports \
+         --input_file tenant.yaml \
+         --config_file config/dev.json \ 
          --format directory \
          --debug
