@@ -22,6 +22,7 @@ jobs:
         run: npm install -g auth0-deploy-cli
 
       - name: Deploy to Auth0
+        working-directory: ./auht0-poc
         env:
           AUTH0_DOMAIN: cesar-training.us.auth0.com
           AUTH0_CLIENT_ID: JpNnYe9U9PccgQhLKC3uj0tCVIYkdIWI
