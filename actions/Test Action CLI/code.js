@@ -5,7 +5,7 @@
 * @param {PostLoginAPI} api - Interface whose methods can be used to change the behavior of the login.
 */
 exports.onExecutePostLogin = async (event, api) => {
-  console.log("Just a test")
+  console.log("Hello World!")
 };
 
 
